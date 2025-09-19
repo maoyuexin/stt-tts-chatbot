@@ -7,12 +7,10 @@ import io
 from dotenv import load_dotenv
 import wave
 
-# ... (imports for AI Agent are correct) ...
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
 from azure.ai.agents.models import ListSortOrder
 
-# ... (Configuration section is correct, no changes needed) ...
 # --- 1. Configuration ---
 load_dotenv()
 
@@ -65,7 +63,6 @@ app.add_middleware(
 
 
 # --- 3. Core Service Functions ---
-# ... (speech_to_text_from_audio_data and text_to_speech_to_stream are correct, no changes needed) ...
 async def speech_to_text_from_audio_data(audio_data: bytes) -> str:
     """
     Converts speech from in-memory audio data (in WAV format) to text using Azure Speech Service.
@@ -204,7 +201,7 @@ async def chat_endpoint(request: Request, file: UploadFile = File(...)):
         agent_response_text = get_agent_response(user_text)
         audio_response_stream = text_to_speech_to_stream(agent_response_text)
         
-        # --- THE FIX ---
+        
         # Get the complete audio data as bytes
         audio_bytes = audio_response_stream.getvalue()
         # Return a regular Response with the full content and length, not a stream.
