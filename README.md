@@ -43,8 +43,8 @@ Before you begin, ensure you have the following installed and configured:
 
 1.  **Clone the Repository**
     ```bash
-    # This project is not yet in a repo, so you can start by initializing one.
-    git init
+    git clone https://github.com/maoyuexin/stt-tts-chatbot.git
+    cd stt-tts-chatbot
     ```
 
 2.  **Create a Virtual Environment**
@@ -98,22 +98,4 @@ You need to run the backend and frontend in two separate terminals.
     ```
     Your web browser should open with the voice assistant interface.
 
----
-
-I also highly recommend creating a `.gitignore` file to prevent sensitive information and unnecessary files from being committed to your repository.
-
-````text
-// filepath: c:\Users\yuexinmao\Documents\Code\multi-agent-accelerator\customer_workshop\STT-TTS-chatbot\.gitignore
-# Environment variables
-.env
-
-# Python cache
-__pycache__/
-*.pyc
-
-# VS Code settings
-.vscode/
-
-# Virtual environment
-.venv/
-venv/
+ 
