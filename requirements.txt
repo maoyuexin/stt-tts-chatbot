@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+azure-cognitiveservices-speech
+python-multipart
+azure-cognitiveservices-speech
+python-dotenv
+streamlit
+requests
+streamlit-audiorec
+streamlit-webrtc
+pydub
+azure-ai-projects
+azure-identity
